@@ -6,7 +6,7 @@ print("Training the PNN Classifier")
 
 pnn<-learn(dataset, category.column = 4)
 
-pnn <- smooth(pnn, sigma=0.8)
+pnn <- smooth(pnn)
 pnn$sigma
 
 pnn$model
