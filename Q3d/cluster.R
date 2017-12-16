@@ -7,7 +7,7 @@ kmeans_2<-kmeans(data[,-4],2)
 
 # Creating model for K means with 3 clusters
 
-kmeans_3<-kmeans(data[,-4],3, algorithm = "MacQueen")
+kmeans_3<-kmeans(data[,-4],3)
 
 # Creating model for K means with 4 clusters
 
