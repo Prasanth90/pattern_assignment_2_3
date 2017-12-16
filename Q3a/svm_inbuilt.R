@@ -13,7 +13,7 @@ y<-dataset$Class
 
 ## Creating Model using inbuilt svm function
 
-svm_model<-svm(x,y, type = 'C', scale=FALSE, kernel = 'linear')
+svm_model<-svm(x,y, type = 'C', scale=TRUE, kernel = 'linear')
 
 print(summary(svm_model))
 

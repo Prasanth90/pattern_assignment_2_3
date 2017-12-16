@@ -10,6 +10,7 @@ Accuracy<-function(){
   #print(actual)
   prediction<-unlist(pred_data[,4])
   #print(length(prediction))
+  print(prediction)
   knn_cm<-table(actual,prediction)
   print(knn_cm)
   return(knn_cm)

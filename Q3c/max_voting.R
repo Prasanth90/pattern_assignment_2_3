@@ -20,7 +20,7 @@ print(svm_predicted$value)
 
 max_voted_output<-c()
 
-for(i in 1:15) {
+for(i in 1:30) {
   #print("Max Voting")
   combined_output = c(pnn_predicted$value[i], knn_predicted$value[i], svm_predicted$value[i])
   fin_val<-names(which(table(combined_output) == max(table(combined_output))))

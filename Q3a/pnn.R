@@ -24,7 +24,7 @@ x<-matrix(c(test_dataset$X1,test_dataset$X2,test_dataset$X3),ncol=3)
 
 output <- c()
 
-for (i in 1:15) {
+for (i in 1:30) {
   val<-guess(pnn, x[i,])
   if(val$category == "1") 
   {
