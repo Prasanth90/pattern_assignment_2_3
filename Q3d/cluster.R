@@ -7,7 +7,7 @@ kmeans_2<-kmeans(data[,-4],2)
 
 # Creating model for K means with 3 clusters
 
-kmeans_3<-kmeans(data[,-4],3)
+kmeans_3<-kmeans(data[,-4],3, algorithm = "MacQueen")
 
 # Creating model for K means with 4 clusters
 
@@ -50,5 +50,10 @@ plot(k_values,total_ss,xlab="k",ylab="MSE",type="l",main="Number of Clusters vs 
 
 # Class output for each sample with k=3 in K Means
 
-print(kmeans_3$cluster)
+predicted<-kmeans_3$cluster
 
+actual<-data[4]
+
+cm_kmeans_3<-table(predicted, unlist(actual))
+
+print(cm_kmeans_3)
