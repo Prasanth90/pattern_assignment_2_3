@@ -22,19 +22,20 @@ kmeans_5<-kmeans(data[,-4],5)
 kmeans_6<-kmeans(data[,-4],6)
 
 # Computing total sum of squares cluster for k=2 :
-total_ss_2<- kmeans_2$withinss[1]+kmeans_2$withinss[2]
+total_ss_2<- kmeans_2$tot.withinss
 
 # Computing total sum of squares cluster for k=3 :
-total_ss_3<- kmeans_3$withinss[1]+kmeans_3$withinss[2]
+total_ss_3<- kmeans_3$tot.withinss
 
 # Computing total sum of squares cluster for k=4 :
-total_ss_4<- kmeans_4$withinss[1]+kmeans_4$withinss[2]
+total_ss_4<- kmeans_4$tot.withinss
+  
 
 # Computing total sum of squares cluster for k=5 :
-total_ss_5<- kmeans_5$withinss[1]+kmeans_5$withinss[2]
+total_ss_5<- kmeans_5$tot.withinss
 
 # Computing total sum of squares cluster for k=6 :
-total_ss_6<- kmeans_6$withinss[1]+kmeans_6$withinss[2]
+total_ss_6<- kmeans_6$tot.withinss
 
 
 total_ss<-c(total_ss_2,total_ss_3,total_ss_4,total_ss_5,total_ss_6)
@@ -49,7 +50,5 @@ plot(k_values,total_ss,xlab="k",ylab="MSE",type="l",main="Number of Clusters vs 
 
 # Class output for each sample with k=3 in K Means
 
-kmeans_3$cluster
-
-
+print(kmeans_3$cluster)
 
