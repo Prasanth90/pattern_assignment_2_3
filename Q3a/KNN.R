@@ -67,7 +67,7 @@ zlim=c(-10,10), main = "KNN - 3D Scatter Plot for Features with Classification")
 s$points3d(test.testdataset[,c("X1", "X2", "X3")],col=c('green','pink','steelblue')[as.numeric(knn.1)],pch=c(21,24,19)[as.numeric(knn.3)])
 
 
-pred_data<-data.frame(test.testdataset,pred=knn.5)
+pred_data<-data.frame(test.testdataset,pred=knn.3)
 #print(pred_data[,4])
 #print(test.def)
 knn_cm<-Accuracy()

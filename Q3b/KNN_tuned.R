@@ -59,7 +59,7 @@ knn.3 <-  knn(train.traindataset, test.testdataset, train.def, k=3)
 knn.5 <- knn(train.traindataset, test.testdataset, train.def, k=5)
 
 #Improvements
-knn.1 <-  knn(train.traindataset, test.testdataset, train.def, k=1)
+knn.7 <-  knn(train.traindataset, test.testdataset, train.def, k=7)
 
 s<-scatterplot3d(train.traindataset[,c("X1", "X2", "X3")],
 color=c('black','red', 'blue')[as.numeric(train.def)],pch=c(21,24,19)[as.numeric(train.def)],
@@ -69,7 +69,7 @@ zlim=c(-10,10), main = "KNN - 3D Scatter Plot for Features with Classification")
 s$points3d(test.testdataset[,c("X1", "X2", "X3")],col=c('green','pink','steelblue')[as.numeric(knn.1)],pch=c(21,24,19)[as.numeric(knn.3)])
 
 
-pred_data<-data.frame(test.testdataset,pred=knn.1)
+pred_data<-data.frame(test.testdataset,pred=knn.7)
 #print(pred_data[,4])
 #print(test.def)
 knn_cm<-Accuracy()
