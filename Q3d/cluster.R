@@ -1,6 +1,6 @@
 
 # Loading Data
-data<-read.csv("Training_Dataset.csv",header=TRUE)
+data<-read.csv("Test_Dataset.csv",header=TRUE)
 
 # Creating model for K means with 2 clusters
 kmeans_2<-kmeans(data[,-4],2)
